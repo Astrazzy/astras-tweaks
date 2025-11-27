@@ -3,7 +3,8 @@
 	"package": "astra.astrastweaks.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+        "ZombiesToHusk"
 	],
 	"injectors": {
 		"defaultRequire": 1
