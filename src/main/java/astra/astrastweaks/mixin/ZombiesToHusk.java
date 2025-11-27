@@ -21,12 +21,8 @@ public abstract class ZombiesToHusk extends Entity {
     @Shadow
     protected abstract void convertToZombieType(EntityType<? extends Zombie> entityType);
 
-    @Unique
-    private EntityType<? extends Zombie> Husk;
-
     public ZombiesToHusk(EntityType<?> entityType, Level level, EntityType<? extends Zombie> husk) {
         super(entityType, level);
-        Husk = husk;
     }
 
 
