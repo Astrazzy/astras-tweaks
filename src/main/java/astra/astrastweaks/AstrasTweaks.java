@@ -2,13 +2,18 @@ package astra.astrastweaks;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.animal.horse.Horse;
 import net.minecraft.world.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 
 public class AstrasTweaks implements ModInitializer {
@@ -19,9 +24,9 @@ public class AstrasTweaks implements ModInitializer {
 	@Override
 	public void onInitialize() {
         UseItemCallback.EVENT.register((player, Level, hand) -> {
-            if(Level instanceof ServerLevel serverLevel) {
-                if(player.isFallFlying()) {
-                    if(player.getMainHandItem().getItem() == Items.FIREWORK_ROCKET || player.getOffhandItem().getItem() == Items.FIREWORK_ROCKET) {
+            if (Level instanceof ServerLevel serverLevel) {
+                if (player.isFallFlying()) {
+                    if (player.getMainHandItem().getItem() == Items.FIREWORK_ROCKET || player.getOffhandItem().getItem() == Items.FIREWORK_ROCKET) {
                         player.getItemBySlot(EquipmentSlot.CHEST).hurtWithoutBreaking(10, player);
                         player.causeFoodExhaustion(12); //12 does not refer the number of hunger bars, a hunger bar is 4 of this value but will target saturation if it is available instead
                     }
@@ -29,6 +34,24 @@ public class AstrasTweaks implements ModInitializer {
             }
             return InteractionResult.PASS;
         });
-        }
 
-    }
+        UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+            if(entity instanceof Horse horse) {
+                if(horse.isTamed() && player.getMainHandItem().getItem() == Items.GOLDEN_CARROT && !horse.getTags().contains("c:golden_carrot_fed")) {
+                        horse.addTag("c:golden_carrot_fed");
+                        horse.addEffect(new MobEffectInstance(MobEffects.SPEED, -1, 1, false, false, false));
+                        horse.resetLove();
+                    }
+                else if (horse.isTamed() && player.getMainHandItem().getItem() == Items.GOLDEN_APPLE && horse.getTags().contains("c:golden_carrot_fed") && !horse.getTags().contains("c:golden_apple_fed")) {
+                    horse.addTag("c:golden_apple_fed");
+                    horse.addEffect(new MobEffectInstance(MobEffects.SPEED,-1, 2,false,false,false));
+                    horse.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST,-1,1,false,false,false));
+                    horse.resetLove();
+
+                }
+            }
+
+
+            return InteractionResult.PASS;
+        });
+    }}
