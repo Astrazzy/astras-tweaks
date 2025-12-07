@@ -26,7 +26,14 @@ public abstract class ZombiesToHusk extends Entity {
     @Inject(at = @At("HEAD"),method = "tick")
     private void init(CallbackInfo info) {
         if (this.getType() != EntityType.HUSK) //Checks if the zombie being checked is not a husk which prevents them from repeatedly converting and disappearing
-            if (this.level().getBiome(this.blockPosition()).is(SNOW_GOLEM_MELTS) && this.level().getBiome(this.blockPosition()).is(IS_OVERWORLD) && this.isAlive() && this.level().getDayTime()%24000 >= 0 && this.level().getDayTime()%24000 <= 12000 && this.isOnFire() || this.level().getBiome(this.blockPosition()).is(IS_NETHER) && this.isAlive() && this.isOnFire() //check the biome/dimension, if on fire, if alive, and time if applicable
+            if (this.level().getBiome(this.blockPosition()).is(SNOW_GOLEM_MELTS)
+                    && this.level().getBiome(this.blockPosition()).is(IS_OVERWORLD)
+                    && this.isAlive()
+                    && this.level().getDayTime()%24000 >= 0
+                    && this.level().getDayTime()%24000 <= 12000 && this.isOnFire()
+                || this.level().getBiome(this.blockPosition()).is(IS_NETHER)
+                    && this.isAlive()
+                    && this.isOnFire()
         )   {
                 convertToZombieType(EntityType.HUSK);
             }
