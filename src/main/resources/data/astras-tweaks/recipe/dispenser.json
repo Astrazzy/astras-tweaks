@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "C": "minecraft:string",
+    "A": "minecraft:stick",
+    "T": "minecraft:dropper"
+  },
+  "pattern": [
+    " AC",
+    "ATC",
+    " AC"
+  ],
+  "result": {
+    "count": 1  ,
+    "id": "minecraft:dispenser"
+  }
+}
