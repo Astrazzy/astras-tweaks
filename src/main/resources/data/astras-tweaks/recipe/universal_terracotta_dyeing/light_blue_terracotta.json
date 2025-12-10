@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#minecraft:terracotta",
+    "#minecraft:terracotta",
+    "#minecraft:terracotta",
+    "#minecraft:terracotta",
+    "#minecraft:terracotta",
+    "#minecraft:terracotta",
+    "#minecraft:terracotta",
+    "#minecraft:terracotta",
+    "minecraft:light_blue_dye"
+  ],
+  "group": "dyeTerracotta",
+  "result": {
+    "count": 8,
+    "id": "minecraft:light_blue_terracotta"
+  }
+}
