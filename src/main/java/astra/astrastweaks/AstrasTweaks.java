@@ -23,7 +23,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-
 public class AstrasTweaks implements ModInitializer {
     public static final String MOD_ID = "astras-tweaks";
 
@@ -76,6 +75,5 @@ public class AstrasTweaks implements ModInitializer {
         });
 
     }
-
 
 }
