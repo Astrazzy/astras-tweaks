@@ -3,7 +3,9 @@
 	"package": "astra.astrastweaks.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-        "ZombiesToHusk"
+        "ZombiesToHusk",
+        "CopperGolemStorage",
+        "ScaffoldingStability"
 	],
 	"injectors": {
 		"defaultRequire": 1
