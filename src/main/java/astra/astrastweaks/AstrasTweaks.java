@@ -22,6 +22,8 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static astra.astrastweaks.ModEnchantmentEffects.registerModEnchantmentEffects;
+
 
 public class AstrasTweaks implements ModInitializer {
     public static final String MOD_ID = "astras-tweaks";
@@ -31,6 +33,7 @@ public class AstrasTweaks implements ModInitializer {
     @Override
     public void onInitialize() {
 
+        registerModEnchantmentEffects();
         LootTableEvents.MODIFY.register((key, builder, source, provider) -> {
             if(key.equals(EntityType.HUSK.getDefaultLootTable().get())) { //Checks if the key (the loot table where the event occurs) is the husk loot table note:the .get is required because otherwise the type inside the .equals will be Optional<ResourceKey<LootTable>> while the key is ResourceKey<LootTable>
                 LootPool poolBuilder = LootPool.lootPool()

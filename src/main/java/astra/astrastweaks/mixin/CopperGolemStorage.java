@@ -10,6 +10,6 @@ public class CopperGolemStorage {
 
     @ModifyExpressionValue(method = "pickupItemFromContainer", at = @At(value = "CONSTANT", args = "intValue=16"))
     private static int IncreaseGolemStorageSize(int original) {
-        return 64;
+        return 64; //replaces the argument in the original .min function limiting the stack size it could grab to 16 with a limiter of this value
     }
 }

@@ -10,6 +10,6 @@ public class ScaffoldingStability {
 
     @ModifyExpressionValue(method = "tick", at = @At(value = "CONSTANT", args = "intValue=7"))
     private static int ImproveStability(int original) {
-        return 14;
+        return 14; //this replaces parts of the original function that check if the distance is less than 7 with this value
     }
 }
