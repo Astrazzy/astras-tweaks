@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:sandstone_slab",
+    "minecraft:sandstone_slab"
+  ],
+  "group": "slabToBlock",
+  "result": {
+    "count": 1,
+    "id": "minecraft:sandstone"
+  }
+}

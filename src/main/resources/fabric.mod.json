@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "astras-tweaks",
+	"version": "${version}",
+	"name": "Astras Tweaks",
+	"description": "This mod contains several tweaks I believe to to either improve the game or make balancing changes to encourage more interesting play",
+	"authors": [
+		"Astrazy (Astra)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/balancing-tweaks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"astra.balancingtweaks.BalancingTweaks"
+		],
+		"client": [
+			"astra.balancingtweaks.BalancingTweaksClient"
+		]
+	},
+	"mixins": [
+		"balancing-tweaks.mixins.json",
+		{
+			"config": "balancing-tweaks.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

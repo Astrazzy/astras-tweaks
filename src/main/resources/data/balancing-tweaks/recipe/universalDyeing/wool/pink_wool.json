@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#minecraft:wool",
+    "minecraft:pink_dye"
+  ],
+  "group": "dyeWool",
+  "result": {
+    "count": 1,
+    "id": "minecraft:pink_wool"
+  }
+}

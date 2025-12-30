@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": "minecraft:oak_planks"
+  },
+  "pattern": [
+    "CCC",
+    "CCC",
+    "   "
+  ],
+  "result": {
+    "count": 6  ,
+    "id": "minecraft:oak_trapdoor"
+  }
+}

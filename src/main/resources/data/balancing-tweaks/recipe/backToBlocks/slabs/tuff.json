@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:tuff_slab",
+    "minecraft:tuff_slab"
+  ],
+  "group": "slabToBlock",
+  "result": {
+    "count": 1,
+    "id": "minecraft:tuff"
+  }
+}

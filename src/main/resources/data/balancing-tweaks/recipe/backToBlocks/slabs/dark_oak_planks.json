@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:dark_oak_slab",
+    "minecraft:dark_oak_slab"
+  ],
+  "group": "slabToBlock",
+  "result": {
+    "count": 1,
+    "id": "minecraft:dark_oak_planks"
+  }
+}

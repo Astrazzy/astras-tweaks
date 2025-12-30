@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:spruce_stairs",
+    "minecraft:spruce_stairs",
+    "minecraft:spruce_stairs",
+    "minecraft:spruce_stairs"
+  ],
+  "group": "stairToBlock",
+  "result": {
+    "count": 3,
+    "id": "minecraft:spruce_planks"
+  }
+}

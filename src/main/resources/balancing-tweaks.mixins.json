@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "astra.balancingtweaks.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ZombiesToHusk",
+		"CopperGolemStorage",
+		"ScaffoldingStability"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:purpur_stairs",
+    "minecraft:purpur_stairs",
+    "minecraft:purpur_stairs",
+    "minecraft:purpur_stairs"
+  ],
+  "group": "stairToBlock",
+  "result": {
+    "count": 3,
+    "id": "minecraft:purpur_block"
+  }
+}

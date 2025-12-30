@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:blackstone_slab",
+    "minecraft:blackstone_slab"
+  ],
+  "group": "slabToBlock",
+  "result": {
+    "count": 1,
+    "id": "minecraft:blackstone"
+  }
+}
